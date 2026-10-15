@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+</head>
+<body>
+
+    <h3 align="center">A Web Page</h3>
+
+    <hr>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">Generate Link</a> |
+        <a href="#">Transaction History</a> |
+        <a href="#">Policy</a> |
+        <a href="#">Logout</a>
+    </nav>
+
+    <hr>
+
+    <form action="hasil.html" method="get">
+
+        <table cellpadding="8">
+            <tr>
+                <td rowspan="5" valign="top">
+                    <img src="src/foto.jpg" alt="foto barang"
+                         width="150" height="150">
+                    <br>
+                    <input type="file" name="picture">
+                </td>
+
+                <td>Title Here :</td>
+                <td>
+                    <input type="text" name="title"
+                           value="MacBook Air E800" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Description :</td>
+                <td>
+                    <textarea name="description" rows="4" cols="30">Year : 2009
+Model :
+Condition : Mint</textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Account Number :</td>
+                <td>
+                    <input type="text" name="account"
+                           value="123-456-789-0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bank :</td>
+                <td>
+                    <select name="bank">
+                        <option value="HSBC">HSBC</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BNI">BNI</option>
+                        <option value="Mandiri">Mandiri</option>
+                        <option value="BRI">BRI</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Account Holder :</td>
+                <td>
+                    <input type="text" name="holder"
+                           value="Name Here" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Transaction :</td>
+                <td>
+                    <select name="transaction">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <br>
+                    <small>
+                        * If the transaction is for 3 person,
+                        choose 3 from the drop-down list.
+                    </small>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="mobile"
+                           value="Yes" checked>
+                    Send To Mobile Phone
+                    <br>
+
+                    <input type="checkbox" name="emailcopy"
+                           value="Yes" checked>
+                    Send to Email
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Send to Mobile Phone :</td>
+                <td>
+                    <input type="tel" name="phone"
+                           value="1234567890, 1234567891">
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>Send to Email :</td>
+                <td>
+                    <input type="email" name="email"
+                           value="example@gmail.com">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" align="center">
+                    <br>
+                    <button type="submit">Generate Nabr Link</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+</body>
+</html>

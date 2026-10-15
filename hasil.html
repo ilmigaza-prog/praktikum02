@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pemesanan Barang</title>
+</head>
+<body>
+
+    <h3 align="center">A Web Page</h3>
+
+    <hr>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">Register</a> |
+        <a href="#">Policy</a> |
+        <a href="#">About</a>
+    </nav>
+
+    <hr>
+
+    <h2 align="center">Hasil Pemesanan Barang</h2>
+
+    <table cellpadding="8">
+        <tr>
+            <td rowspan="5" valign="top">
+                <img src="src/foto.jpg" alt="Foto Barang"
+                     width="150" height="150">
+            </td>
+
+            <td>Title Here :</td>
+            <td id="title"></td>
+        </tr>
+
+        <tr>
+            <td>Description :</td>
+            <td id="description"></td>
+        </tr>
+
+        <tr>
+            <td>Total Amount :</td>
+            <td>E800</td>
+        </tr>
+
+        <tr>
+            <td>Pay to :</td>
+            <td id="account"></td>
+        </tr>
+
+        <tr>
+            <td>Payment Type :</td>
+            <td id="bank"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Account Holder :</td>
+            <td id="holder"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Account No :</td>
+            <td id="account2"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td colspan="2">
+                <span id="mobile"></span>
+                <br>
+                <span id="emailcopy"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Send to Mobile Phone :</td>
+            <td id="phone"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Send to Email :</td>
+            <td id="email"></td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <p>
+        <button onclick="history.back()">Kembali</button>
+    </p>
+
+    <script>
+        const data = new URLSearchParams(window.location.search);
+
+        document.getElementById("title").textContent =
+            data.get("title") || "-";
+
+        document.getElementById("description").textContent =
+            data.get("description") || "-";
+
+        document.getElementById("account").textContent =
+            data.get("account") || "-";
+
+        document.getElementById("account2").textContent =
+            data.get("account") || "-";
+
+        document.getElementById("bank").textContent =
+            data.get("bank") || "-";
+
+        document.getElementById("holder").textContent =
+            data.get("holder") || "-";
+
+        document.getElementById("phone").textContent =
+            data.get("phone") || "-";
+
+        document.getElementById("email").textContent =
+            data.get("email") || "-";
+
+        document.getElementById("mobile").textContent =
+            data.has("mobile") ? "✓ Send to Mobile Phone" : "";
+
+        document.getElementById("emailcopy").textContent =
+            data.has("emailcopy") ? "✓ Email me copy of transaction" : "";
+    </script>
+
+</body>
+</html>
